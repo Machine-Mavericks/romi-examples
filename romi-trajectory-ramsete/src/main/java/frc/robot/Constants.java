@@ -19,13 +19,18 @@ import edu.wpi.first.wpilibj.kinematics.DifferentialDriveKinematics;
 public final class Constants {
   public static final class DriveConstants {
     
-    public static final double ksVolts = 0.957; //Ks -- from Characterization
-    public static final double kvVoltSecondsPerMeter = 6.44;//Kv -- from Characterization
-    public static final double kaVoltSecondsSquaredPerMeter = 0.0389; // Ka -- from Characterization
+    //Ks -- from Characterization
+    public static final double ksVolts = 0.957;
 
+    //Kv -- from Characterization
+    public static final double kvVoltSecondsPerMeter = 6.44;
+    
+    // Ka -- from Characterization
+    public static final double kaVoltSecondsSquaredPerMeter = 0.0389;
     public static final double kPDriveVel = 0.085;
 
-    public static final double kTrackwidthMeters = 0.142072613; // Track Width -- from Characterization
+    // Track Width -- from Characterization
+    public static final double kTrackwidthMeters = 0.142072613; 
     public static final DifferentialDriveKinematics kDriveKinematics =
         new DifferentialDriveKinematics(kTrackwidthMeters);
   }
