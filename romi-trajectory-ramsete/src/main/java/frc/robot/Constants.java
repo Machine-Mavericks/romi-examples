@@ -33,6 +33,10 @@ public final class Constants {
     public static final double kTrackwidthMeters = 0.142072613; 
     public static final DifferentialDriveKinematics kDriveKinematics =
         new DifferentialDriveKinematics(kTrackwidthMeters);
+
+    // Look at the http://wpilib.local  to find the current voltage and put that 
+    // in here
+    public static final double kBatteryVoltage = 8;
   }
 
   public static final class AutoConstants {

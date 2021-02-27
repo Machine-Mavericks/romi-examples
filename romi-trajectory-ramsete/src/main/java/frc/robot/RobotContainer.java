@@ -135,15 +135,15 @@ public class RobotContainer {
   //
   // ----------------------- start copy ------------------------------
   //
-  // Glenn's custom trajectory
-  private Command generateZigZagCommand() {
+  // Calibration scenario 1
+  private Command generateDriveStraightDistanceCommand() {
     var autoVoltageConstraint =
         new DifferentialDriveVoltageConstraint(
             new SimpleMotorFeedforward(DriveConstants.ksVolts, 
                                        DriveConstants.kvVoltSecondsPerMeter, 
                                        DriveConstants.kaVoltSecondsSquaredPerMeter),
             DriveConstants.kDriveKinematics,
-            10);
+            DriveConstants.kBatteryVoltage);
 
     TrajectoryConfig config =
         new TrajectoryConfig(AutoConstants.kMaxSpeedMetersPerSecond, 
@@ -325,7 +325,7 @@ public class RobotContainer {
 
     // Setup SmartDashboard options
     m_chooser.setDefaultOption("Ramsete Trajectory", generateRamseteCommand());
-    m_chooser.addOption("ZigZag Trajectory", generateZigZagCommand());
+    m_chooser.addOption("Calibration 1", generateDriveStraightDistanceCommand());
     m_chooser.addOption("BackDiagonalRight Trajectory", generateBackDiagonalRightCommand());
     //
     //----   copy this command and paste it below the comment ----
